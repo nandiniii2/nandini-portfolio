@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-primary-500/30 selection:text-primary-500;
+  }
+}
+
+@layer components {
+  .bento-card {
+    @apply bg-surface border border-surfaceBorder rounded-3xl p-6 md:p-8 flex flex-col relative overflow-hidden shadow-2xl transition-all duration-500 ease-out;
+  }
+
+  .bento-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 transition-opacity duration-500 pointer-events-none;
+  }
+
+  .bento-card:hover::before {
+    @apply opacity-100;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-300 to-slate-500;
+  }
+}
+
+/* Custom Scrollbar for the dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E1E1E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
