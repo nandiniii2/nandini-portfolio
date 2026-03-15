@@ -79,7 +79,7 @@ const ProjectModal = ({ isOpen, onClose }) => {
                                         </div>
                                         <div className="flex gap-2 self-start sm:self-auto shrink-0">
                                             <button className="flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-full bg-white/5 hover:bg-white/10 text-slate-300 transition-colors">
-                                                <ExternalLink size={14}>
+                                                <ExternalLink size={14}/>
                                                     <a href="https://f1-finish-tier-predictor.streamlit.app/"> Demo </a>
                                             </button>
                                             <button className="flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-full bg-white/5 hover:bg-white/10 text-slate-300 transition-colors">
