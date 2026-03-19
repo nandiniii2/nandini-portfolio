@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import BentoGrid from './components/BentoGrid';
 import FloatingDock from './components/FloatingDock';
 import ProjectModal from './components/ProjectModal';
@@ -67,6 +68,7 @@ function App() {
       <ProjectModal isOpen={activeModal === 'project'} onClose={closeModal} />
       <ExperienceModal isOpen={activeModal === 'experience'} onClose={closeModal} />
       <TechStackModal isOpen={activeModal === 'techstack'} onClose={closeModal} />
+      <Analytics />
     </div>
   );
 }
