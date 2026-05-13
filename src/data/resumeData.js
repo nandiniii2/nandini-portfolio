@@ -30,10 +30,10 @@ export const resumeData = {
             location: "Bloomington, IN",
             date: "Jan 2026 - Present",
             bullets: [
-                "Designed LLM-based feature engineering pipelines to extract structured information from 5K+ long-form documents utilized in grantmaking analysis.",
-                "Developed and evaluated transformer-based NLP features using BERT, RoBERTa and LLMs to support organizational classification and comparison.",
-                "Evaluated trade-offs between transformer-based architectures to balance accuracy, latency and computational cost.",
-                "Applied LLM-assisted code generation and review generated outputs to identify logic gaps, edge cases and prompt-related issues."
+                "Contributed to LLM-based feature engineering workflows, running pre-trained models to extract structured information from 5K+ nonprofit documents used in grantmaking analysis.",
+                "Utilized pre-trained transformer models (RoBERTa, Label2Vec) to extract and evaluate NLP-based features for organizational classification, analyzing output quality and surfacing relevant signals for grantmaking analysis.",
+                "Defined technical architecture and workflow for an AI-assisted web application, guiding implementation approach and coordinating cross-member development to ensure consistent delivery.",
+                "Applied Generative AI techniques including security-focused prompt engineering and LLM-assisted code generation to identify adversarial inputs, logic gaps and edge cases in the application layer."
             ]
         },
         {
@@ -99,7 +99,7 @@ export const resumeData = {
             degree: "MS in Computer Science",
             school: "Indiana University - Bloomington",
             date: "Aug 2024 - May 2026",
-            gpa: "3.86/4.00"
+            gpa: "3.87/4.00"
         },
         {
             degree: "BE in Computer Engineering",
@@ -110,10 +110,26 @@ export const resumeData = {
     ],
     projects: [
         {
+            title: "Your Skin, Decoded",
+            category: "Full-Stack AI Application",
+            description: "An AI-powered skincare application that generates stateless, personalized skincare verdicts and formulation analysis.",
+            tech: ["React", "FastAPI", "SQLite", "Groq AI (Llama 3)", "BeautifulSoup4"],
+            demoLink: "https://your-skin-decoded.vercel.app",
+            githubLink: "https://github.com/nandiniii2/YourSkinDecoded",
+            bullets: [
+                "Built an interactive React frontend that dynamically renders personalized dermatological verdicts and formulation analysis.",
+                "Architected a Python FastAPI backend leveraging Groq's Llama-3 API to output rapid, structured JSON verdicts evaluating cosmetics against individual skin profiles.",
+                "Integrated a custom web scraper using BeautifulSoup4 to autonomously extract formulation details (INCI list) when ingredients are not manually provided.",
+                "Implemented stateless guest session authentication and local SQLite database to manage user skin profiles securely."
+            ]
+        },
+        {
             title: "F1 Finish Tier Predictor",
             category: "Data Science",
             description: "Machine learning app predicting Formula 1 finish tiers using Random Forest and XGBoost with an interactive Streamlit UI.",
             tech: ["Python", "XGBoost", "Streamlit"],
+            demoLink: "https://f1-finish-tier-predictor.streamlit.app",
+            githubLink: "https://github.com/nandiniii2/f1-finish-tier-predictor",
             bullets: [
                 "Conducted exploratory analysis on Formula 1 race, lap-time, and pit-stop data to identify performance patterns.",
                 "Engineered race features (lap-time stats, pit-stop durations, grid position, circuits) and trained predictive models (Random Forest, XGBoost) to forecast finishing positions, evaluated with Mean Absolute Error.",
@@ -125,6 +141,8 @@ export const resumeData = {
             category: "Data Engineering",
             description: "Distributed big data pipeline analyzing 5M+ COVID-19 patient records with real-time AWS QuickSight dashboards.",
             tech: ["PySpark", "AWS S3", "Hadoop"],
+            demoLink: "",
+            githubLink: "",
             bullets: [
                 "Designed distributed data processing pipeline handling 5M+ records using PySpark and AWS, applying partitioning and compression strategies to reduce query response time under high-load scenarios.",
                 "Integrated real-time telemetry dashboards using AWS QuickSight to monitor ICU occupancy, infection trends and system-level resource utilization.",
@@ -136,6 +154,8 @@ export const resumeData = {
             category: "Software Engineering",
             description: "Full-stack library management application with JWT auth and role-based access control.",
             tech: ["Angular", "ASP.NET Core", "SQL Server"],
+            demoLink: "",
+            githubLink: "https://github.com/nandiniii2/readers-nest",
             bullets: [
                 "Built a full-stack library management application with Angular 15, ASP.NET Core and SQL Server, handling 1K+ records across books, users and categories.",
                 "Applied JWT authentication and role-based access control for 2 user types, ensuring secure logins and compliance with data access policies.",
