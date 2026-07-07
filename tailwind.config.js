@@ -7,34 +7,36 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#050505', // True obsidian
-        surface: '#121212',
-        surfaceLight: '#1E1E1E',
-        surfaceBorder: 'rgba(255, 255, 255, 0.08)',
-        primary: {
-          500: '#38bdf8', // Cyber Cyan / Electric Blue
-          600: '#0284c7',
+        background: '#fdfbf7', // Warm cream
+        surface: '#ffffff', // Pure white cards
+        surfaceBorder: 'rgba(0, 0, 0, 0.05)',
+        textMain: '#1a1a1a', // Soft black for high readability
+        textMuted: '#666666',
+        botanical: {
+          red: '#d90429',
+          burgundy: '#800020',
+          yellow: '#ffb703',
+          blue: '#3a86ff',
+          green: '#2a9d8f' // Added as a subtle botanical accent
         }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Outfit', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
-      gridTemplateColumns: {
-        'bento': 'repeat(auto-fit, minmax(280px, 1fr))',
-      },
       animation: {
-        'marquee': 'marquee 25s linear infinite',
-        'pulse-glow': 'pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'sway': 'sway 6s ease-in-out infinite',
+        'bloom': 'bloom 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
       },
       keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
+        sway: {
+          '0%, 100%': { transform: 'rotate(-2deg)' },
+          '50%': { transform: 'rotate(2deg)' },
         },
-        'pulse-glow': {
-          '0%, 100%': { opacity: 0.5 },
-          '50%': { opacity: 1 },
+        bloom: {
+          '0%': { opacity: 0, transform: 'scale(0.95) translateY(10px)' },
+          '100%': { opacity: 1, transform: 'scale(1) translateY(0)' },
         }
       }
     },

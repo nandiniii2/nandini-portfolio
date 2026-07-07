@@ -1,58 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Analytics } from '@vercel/analytics/react';
-import BentoGrid from './components/BentoGrid';
+import GalleryLayout from './components/GalleryLayout';
 import FloatingDock from './components/FloatingDock';
-import ProjectModal from './components/ProjectModal';
 import ExperienceModal from './components/ExperienceModal';
 import TechStackModal from './components/TechStackModal';
 
 function App() {
-  const [activeModal, setActiveModal] = useState(null); // 'project', 'experience', 'techstack'
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
-  const openProjectModal = () => {
-    setActiveModal('project');
-  };
+  const [activeModal, setActiveModal] = useState(null); // 'experience', 'techstack'
 
   const closeModal = () => {
     setActiveModal(null);
   };
 
   return (
-    <div className="min-h-screen w-full bg-background text-slate-200 p-4 md:p-6 lg:p-8 font-sans relative overflow-x-hidden flex flex-col">
-      {/* Global Mouse Tracking Glow */}
-      <div
-        className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
-        style={{
-          background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(99, 102, 241, 0.08), transparent 80%)`
-        }}
-      />
+    <div className="min-h-screen w-full bg-background text-textMain relative overflow-x-hidden flex flex-col font-sans">
+      
+      {/* Botanical ambient glow at the top */}
+      <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-botanical-yellow/10 to-transparent pointer-events-none" />
 
-      {/* Subtle background glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-primary-500/10 blur-[120px] pointer-events-none rounded-full" />
-
-      <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col">
-        <header className="flex justify-between items-center mb-6 shrink-0">
-          <div className="font-mono text-xs font-bold tracking-widest text-slate-500">
-            NANDINI PATEL <span className="text-primary-500">_</span>
+      <div className="w-full relative z-10 flex flex-col flex-grow">
+        <header className="flex justify-between items-center p-6 md:p-8 max-w-6xl mx-auto w-full">
+          <div className="subheading-sans text-textMuted tracking-widest">
+            NANDINI PATEL <span className="text-botanical-burgundy">✦</span>
           </div>
-          <div className="font-mono text-xs text-slate-500">
-            v2.0 // SYSTEM ONLINE
+          <div className="subheading-sans text-botanical-blue">
+            EST. 2026
           </div>
         </header>
 
-        <main className="w-full pb-32">
-          <BentoGrid
-            onProjectClick={openProjectModal}
+        <main className="w-full pb-32 flex-grow">
+          <GalleryLayout
             onExperienceClick={() => setActiveModal('experience')}
             onTechStackClick={() => setActiveModal('techstack')}
           />
@@ -61,11 +38,13 @@ function App() {
 
       <FloatingDock
         onExperienceClick={() => setActiveModal('experience')}
-        onProjectClick={() => setActiveModal('project')}
+        onProjectClick={() => {
+          // Smooth scroll to The Exhibition section instead of opening a modal
+          window.scrollTo({ top: 600, behavior: 'smooth' });
+        }}
       />
 
       {/* Modals */}
-      <ProjectModal isOpen={activeModal === 'project'} onClose={closeModal} />
       <ExperienceModal isOpen={activeModal === 'experience'} onClose={closeModal} />
       <TechStackModal isOpen={activeModal === 'techstack'} onClose={closeModal} />
       <Analytics />

@@ -37,7 +37,7 @@ const TechStackModal = ({ isOpen, onClose }) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-md"
+                    className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-surface/80 backdrop-blur-md"
                     onClick={onClose}
                 >
                     <motion.div
@@ -45,24 +45,24 @@ const TechStackModal = ({ isOpen, onClose }) => {
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95, y: 20 }}
                         transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                        className="w-full max-w-4xl max-h-[90vh] bg-surface border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col relative"
+                        className="w-full max-w-4xl max-h-[90vh] bg-background border border-surfaceBorder rounded-3xl overflow-hidden shadow-2xl flex flex-col relative"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Header Area */}
-                        <div className="relative p-8 border-b border-white/5 flex justify-between items-center bg-surfaceLight/30">
+                        <div className="relative p-8 border-b border-surfaceBorder flex justify-between items-center bg-surface">
                             <div className="flex items-center gap-3">
-                                <div className="w-12 h-12 rounded-xl bg-primary-500/20 border border-primary-500/30 flex items-center justify-center text-primary-400">
+                                <div className="w-12 h-12 rounded-full bg-botanical-yellow/10 border border-botanical-yellow/20 flex items-center justify-center text-botanical-burgundy">
                                     <Blocks size={24} />
                                 </div>
                                 <div>
-                                    <h2 className="text-2xl font-black text-white">Technical Arsenal</h2>
-                                    <p className="text-slate-400 text-sm font-mono mt-1">Full-stack software engineering x Data science</p>
+                                    <h2 className="heading-serif text-3xl text-textMain">Technical Arsenal</h2>
+                                    <p className="text-textMuted text-sm font-sans mt-1">Full-stack software engineering x Data science</p>
                                 </div>
                             </div>
 
                             <button
                                 onClick={onClose}
-                                className="p-2 rounded-full bg-black/40 text-slate-400 hover:text-white hover:bg-black/60 transition-colors"
+                                className="p-2 rounded-full bg-surfaceBorder text-textMuted hover:text-botanical-burgundy hover:bg-botanical-yellow/20 transition-colors"
                             >
                                 <X size={20} />
                             </button>
@@ -73,14 +73,14 @@ const TechStackModal = ({ isOpen, onClose }) => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 {categories.map((category, idx) => (
                                     <div key={idx}>
-                                        <h3 className="text-sm font-mono text-primary-500 uppercase tracking-widest mb-4 border-b border-white/5 pb-2">
+                                        <h3 className="subheading-sans text-botanical-blue mb-4 border-b border-surfaceBorder pb-2">
                                             {category.label}
                                         </h3>
                                         <div className="flex flex-wrap gap-2">
                                             {category.items.map((skill, i) => (
                                                 <div
                                                     key={i}
-                                                    className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-slate-300 text-sm hover:border-primary-500/50 hover:bg-primary-500/10 transition-colors cursor-default"
+                                                    className="px-3 py-1.5 bg-surface border border-surfaceBorder rounded-lg text-textMain font-mono text-sm shadow-sm hover:border-botanical-burgundy hover:text-botanical-burgundy transition-colors cursor-default"
                                                 >
                                                     {skill}
                                                 </div>

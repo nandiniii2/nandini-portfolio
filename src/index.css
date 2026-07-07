@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,43 +6,50 @@
 
 @layer base {
   body {
-    @apply bg-background text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-primary-500/30 selection:text-primary-500;
+    @apply bg-background text-textMain font-sans antialiased overflow-x-hidden selection:bg-botanical-yellow/40 selection:text-textMain;
   }
 }
 
 @layer components {
-  .bento-card {
-    @apply bg-surface border border-surfaceBorder rounded-3xl p-6 md:p-8 flex flex-col relative overflow-hidden shadow-2xl transition-all duration-500 ease-out;
+  /* Artwork Card Style */
+  .artwork-card {
+    @apply bg-surface border border-surfaceBorder rounded-xl p-6 md:p-8 flex flex-col relative overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 ease-out;
   }
 
-  .bento-card::before {
+  /* Botanical accent lines */
+  .artwork-card::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 transition-opacity duration-500 pointer-events-none;
+    @apply absolute inset-0 border-t-2 border-transparent transition-colors duration-500 pointer-events-none;
   }
 
-  .bento-card:hover::before {
-    @apply opacity-100;
+  .artwork-card:hover::before {
+    @apply border-botanical-burgundy/80;
   }
 
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-300 to-slate-500;
+  /* Typography Utilities */
+  .heading-serif {
+    @apply font-serif text-textMain tracking-tight;
+  }
+  
+  .subheading-sans {
+    @apply font-sans font-medium text-textMuted uppercase tracking-widest text-xs;
   }
 }
 
-/* Custom Scrollbar for the dark theme */
+/* Custom Scrollbar for light theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #fdfbf7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1E1E1E;
+  background: #e2e0dc;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #333;
+  background: #c5c3bf;
 }
