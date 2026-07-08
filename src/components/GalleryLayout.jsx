@@ -69,7 +69,7 @@ const GalleryLayout = ({ onExperienceClick, onTechStackClick }) => {
           <motion.div {...fadeUp(0)} className="flex items-center gap-3 mb-8">
             <div className="flex items-center gap-2 text-botanical-burgundy">
               <MapPin size={14} />
-              <span className="subheading-sans">Bloomington, IN — Open to Relocation</span>
+              <span className="subheading-sans">United States - Open to Relocation</span>
             </div>
             <div className="h-px w-12 bg-botanical-yellow" />
             <span className="subheading-sans text-textMuted">MS Computer Science · IU Bloomington</span>
