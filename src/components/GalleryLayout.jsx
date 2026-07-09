@@ -90,10 +90,12 @@ const GalleryLayout = ({ onExperienceClick, onTechStackClick }) => {
             {...fadeUp(0.2)}
             className="text-xl md:text-2xl text-textMuted font-sans font-light max-w-2xl leading-relaxed mb-10"
           >
-            I engineer <strong className="text-textMain font-semibold">scalable data systems</strong> and
-            build <strong className="text-textMain font-semibold">AI-powered products</strong> — with
-            an eye for design sharp enough to almost get me into interior design school.
-          </motion.p>
+          I'm a <strong className="text-textMain font-semibold">Full-stack software engineer</strong> who 
+            writes <strong className="text-textMain font-semibold">robust backend logic</strong>, 
+            ships <strong className="text-textMain font-semibold">AI-powered products</strong>, 
+            and obsesses over pixels and layouts with the exact intensity that 
+            almost got me into <span className="font-serif italic text-accentColor">interior design</span>.          
+            </motion.p>
 
           {/* CTA Row */}
           <motion.div {...fadeUp(0.3)} className="flex flex-wrap gap-4">

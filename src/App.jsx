@@ -23,9 +23,9 @@ function App() {
           <div className="subheading-sans text-textMuted tracking-widest">
             NANDINI PATEL <span className="text-botanical-burgundy">✦</span>
           </div>
-          <div className="subheading-sans text-botanical-blue">
+          {/* <div className="subheading-sans text-botanical-blue">
             EST. 2026
-          </div>
+          </div> */}
         </header>
 
         <main className="w-full pb-32 flex-grow">
