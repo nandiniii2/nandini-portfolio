@@ -277,7 +277,7 @@ const GalleryLayout = ({ onExperienceClick, onTechStackClick }) => {
               NANDINI PATEL <span className="text-botanical-burgundy">✦</span> 2026
             </div>
             <div className="subheading-sans text-textMuted">
-              Designed & Built from scratch · Not a template
+              Designed & Built from scratch
             </div>
           </motion.div>
         </div>
