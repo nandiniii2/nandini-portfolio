@@ -239,7 +239,6 @@ const GalleryLayout = ({ onExperienceClick, onTechStackClick }) => {
             </h2>
             <p className="text-textMuted text-lg leading-relaxed mb-10">
               Currently open to full-time roles in software engineering and data science.
-              I reply fast.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
