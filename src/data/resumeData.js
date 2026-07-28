@@ -4,7 +4,7 @@ export const resumeData = {
     shortBio: "Software engineer working at the intersection of data, systems and scale.",
     longBio: "I care about clarity, performance, and systems that hold up in production.",
     contact: {
-        email: "nandinipatel0204@gmail.com",
+        email: "[nandinipatel0204@gmail.com]",
         phone: "(870) 923-2213",
         linkedin: "https://www.linkedin.com/in/nandinipatel0204",
         github: "https://github.com/nandiniii2",
